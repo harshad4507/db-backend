@@ -5,6 +5,9 @@ const db = require('./config/dbConnect');
 const cookieParser = require('cookie-parser');
 const userRouter = require('./routes/User');
 const bookRouter = require('./routes/Book');
+const cors = require('cors');
+
+app.use(cors());
 
 const PORT = process.env.PORT || 3000; 
 app.use(express.json());
